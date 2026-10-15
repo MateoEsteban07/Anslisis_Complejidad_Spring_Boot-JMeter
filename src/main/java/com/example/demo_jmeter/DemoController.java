@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/demo")
 public class DemoController {
 
-    @GetMapping("/ineficiente")
+    @GetMapping("/Ineficiente")
     public String procesamientoIneficiente(@RequestParam(defaultValue = "2000") int n) {
 
         long inicio = System.currentTimeMillis();     
@@ -26,10 +26,10 @@ public class DemoController {
         }      
         long fin = System.currentTimeMillis();
 
-        return "Ineficiente O(n^2) para n=" + n + " completado en: (fin - inicio) = " + (fin - inicio) + " ms. Resultado: " + acumulador;
+        return "Ineficiente O(n^2) para n =" + n + " completado en: (fin - inicio) = " + (fin - inicio) + " ms. Resultado: " + acumulador;
     }
   // ALGORITMO OPTIMIZADO: Un solo bucle lineal - Complejidad O( n )
-    @GetMapping("/optimizado")
+    @GetMapping("/Optimizado")
     public String procesamientoOptimizado(@RequestParam(defaultValue = "2000") int n) {
 
         long inicio = System.currentTimeMillis();
@@ -41,7 +41,7 @@ public class DemoController {
         }
 
         long fin = System.currentTimeMillis();
-        return "Optimizado O( n ) equivalente para n=" + n + " completado en: (fin - inicio) = " + (fin - inicio) + " ms. Resultado: " + acumulador;
+        return "Optimizado O(n) equivalente para n=" + n + " completado en: (fin - inicio) = " + (fin - inicio) + " ms. Resultado: " + acumulador;
 
     }
 }
